@@ -17,6 +17,8 @@ public class LoginAction {
 	@RequestMapping(value = "/loginIn", method = RequestMethod.POST)
 	public Map<String, String> loginIn(HttpSession session, String userName, Integer userPwd) {
 		System.out.println("第一次修改");
+		System.out.println("第二次修改");
+		System.out.println("第三次修改");
 		Map<String, String> message = new HashMap<String, String>();
 		if ("admin".equals(userName) && userPwd == 123) {
 			session.setAttribute("USER", new Users(userName, userPwd));
